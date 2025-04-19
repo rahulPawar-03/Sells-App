@@ -97,10 +97,11 @@ cookie = Cookie("Hide&Seek", 4)
 ice = Icecreame("Chocolate")
 sundae = Sundae("Vanila")
 
-check.add_items()
-print("Total Items in cart : ", check.count_of_items())
-print(check)
+check.add_items(candy, cookie, ice, sundae)
+
 try:
-    print(check.total_cost())
+    print("Total Items in cart : ", check.count_of_items())
+    print(check)
+    print("Total cost : ", check.total_cost())
 except CartIsEmptyException as emp:
     print(emp)
